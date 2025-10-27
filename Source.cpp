@@ -11,6 +11,19 @@ int tich(int a, int b); {
 	return a * b;
 }
 float thuong(int a, int b);
+
+bool kiemTraNguyenTo(int n) {
+	if (n < 2) {
+        return false;
+    }
+    for (int i = 2; i * i <= n; ++i) {
+        if (n % i == 0) {
+            return false;
+        }
+    }
+    return true;
+}
+
 bool ktSoHoanThien(int a){
 	int tam = 0;
 	for(int i = 1; i < a; i++)
