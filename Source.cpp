@@ -12,6 +12,18 @@ int tich(int a, int b); {
 }
 float thuong(int a, int b);
 
+bool kiemTraNguyenTo(int n) {
+	if (n < 2) {
+        return false;
+    }
+    for (int i = 2; i * i <= n; ++i) {
+        if (n % i == 0) {
+            return false;
+        }
+    }
+    return true;
+}
+
 int main()
 {
 	cout << "DAY LA CHUONG TRINH DE THUC HANH GIT";
